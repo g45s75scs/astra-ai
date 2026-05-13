@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astra Ai Learning</title>
+
+  <!-- =========================
+      ✏️ EDIT ONLY HERE
+  ========================== -->
+  <script>
+    const CONFIG = {
+      pixelId: "3086294128231899",
+      channelName: "Astra Ai Learning",
+      tgLink: "https://t.me/+4TzAA-YaPCIyMjc1",
+      timerSec: 60,                 // change 15 / 30 / 60 anytime
+      agencyName: "AdBlast Bengal"  // optional
+    };
+  </script>
+  <!-- ========================= -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    if (CONFIG.pixelId) {
+      fbq('init', CONFIG.pixelId);
+      fbq('track', 'PageView');
+    }
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=3086294128231899&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <style>
+    :root{
+      --bg:#f6f8ff;
+      --card:#ffffff;
+      --line:rgba(20,30,60,.10);
+      --txt:#0b1324;
+      --muted:rgba(11,19,36,.65);
+      --accent:#2563eb;     /* blue */
+      --accent2:#22c55e;    /* green */
+      --danger:#ef4444;
+      --shadow: 0 14px 40px rgba(20,30,60,.12);
+      --radius:18px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+    body{
+      min-height:100dvh;
+      color:var(--txt);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 520px at 12% 12%, rgba(37,99,235,.14), transparent 60%),
+        radial-gradient(900px 520px at 88% 78%, rgba(34,197,94,.12), transparent 60%),
+        var(--bg);
+      overflow-x:hidden;
+    }
+    .wrap{
+      width:min(520px, 100%);
+      margin:0 auto;
+      padding:22px 14px 18px;
+    }
+
+    .topbar{
+      height:10px;border-radius:999px;
+      background:linear-gradient(90deg, var(--accent), var(--accent2));
+      margin:10px 6px 18px;
+      box-shadow: 0 10px 24px rgba(37,99,235,.12);
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px 16px 16px;
+      position:relative;
+    }
+
+    .head{
+      display:flex; align-items:center; gap:12px;
+      margin-bottom:12px;
+    }
+    .logo{
+      width:46px;height:46px;border-radius:14px;
+      display:grid;place-items:center;
+      background:rgba(37,99,235,.08);
+      border:1px solid rgba(37,99,235,.18);
+      font-weight:900; letter-spacing:.6px;
+      color:var(--accent);
+      flex:0 0 auto;
+    }
+    .title h1{
+      font-size:20px; line-height:1.2; font-weight:950;
+      letter-spacing:.2px;
+    }
+    .title p{
+      margin-top:3px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      margin:10px 0 12px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(34,197,94,.10);
+      border:1px solid rgba(34,197,94,.18);
+      color:#0f7a3b;
+      font-weight:800;
+      font-size:12px;
+    }
+    .dot{
+      width:8px;height:8px;border-radius:99px;
+      background:var(--accent2);
+      box-shadow:0 0 0 0 rgba(34,197,94,.35);
+      animation:pulse 1.6s infinite;
+    }
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 0 rgba(34,197,94,.35)}
+      70%{box-shadow:0 0 0 10px rgba(34,197,94,0)}
+      100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}
+    }
+
+    .points{
+      display:grid; gap:10px;
+      margin:10px 0 14px;
+    }
+    .pt{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:10px 12px;
+      border-radius:14px;
+      background:rgba(20,30,60,.035);
+      border:1px solid rgba(20,30,60,.06);
+    }
+    .tick{
+      width:18px;height:18px;border-radius:6px;
+      display:grid;place-items:center;
+      margin-top:1px;
+      background:rgba(37,99,235,.10);
+      border:1px solid rgba(37,99,235,.16);
+      color:var(--accent);
+      font-weight:900;
+      flex:0 0 auto;
+      font-size:12px;
+    }
+    .pt b{display:block; font-size:13px}
+    .pt span{display:block; font-size:12px; color:var(--muted); margin-top:2px}
+
+    .timerBox{
+      margin-top:10px;
+      padding:12px 12px;
+      border-radius:16px;
+      background:rgba(37,99,235,.06);
+      border:1px solid rgba(37,99,235,.12);
+    }
+    .timerTop{
+      display:flex; justify-content:space-between; align-items:center;
+      margin-bottom:8px;
+      font-size:11px;
+      color:var(--muted);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .time{
+      font-size:28px;
+      font-weight:950;
+      letter-spacing:.5px;
+      color:var(--txt);
+    }
+    .time.urgent{ color:var(--danger); }
+    .bar{
+      height:5px; border-radius:999px;
+      background:rgba(20,30,60,.08);
+      overflow:hidden;
+    }
+    .fill{
+      height:100%;
+      width:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg, var(--accent), var(--accent2));
+      transition:width 1s linear;
+    }
+    .fill.urgent{ background: var(--danger); }
+
+    .cta{
+      margin-top:14px;
+      display:block;
+      width:100%;
+      text-align:center;
+      padding:16px 14px;
+      border-radius:999px;
+      background:linear-gradient(90deg, var(--accent), #1d4ed8);
+      color:#fff;
+      font-weight:950;
+      text-decoration:none;
+      border:0;
+      box-shadow:0 12px 26px rgba(37,99,235,.22);
+      touch-action:manipulation;
+    }
+    .cta:active{ transform:scale(.985); opacity:.92; }
+
+    .subnote{
+      margin-top:10px;
+      text-align:center;
+      color:var(--muted);
+      font-size:11.5px;
+      line-height:1.45;
+    }
+
+    footer{
+      margin-top:14px;
+      padding:14px 10px 18px;
+      text-align:center;
+      color:rgba(11,19,36,.55);
+      font-size:10px;
+      line-height:1.6;
+    }
+    footer b{color:rgba(11,19,36,.85)}
+    .disc{
+      margin-top:8px;
+      padding-top:10px;
+      border-top:1px solid rgba(20,30,60,.08);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar"></div>
+
+    <div class="card">
+      <div class="head">
+        <div class="logo" id="logoTxt">AA</div>
+        <div class="title">
+          <h1 id="name">Astra Ai Learning</h1>
+          <p>Educational community • simple updates & learning format</p>
+        </div>
+      </div>
+
+      <div class="pill">
+        <span class="dot"></span>
+        Access open • join to continue
+      </div>
+
+      <div class="points">
+        <div class="pt">
+          <div class="tick">✓</div>
+          <div>
+            <b>Learning-first approach</b>
+            <span>Shared for awareness and education only.</span>
+          </div>
+        </div>
+        <div class="pt">
+          <div class="tick">✓</div>
+          <div>
+            <b>Clean & structured posts</b>
+            <span>Short notes, examples, and follow-ups.</span>
+          </div>
+        </div>
+        <div class="pt">
+          <div class="tick">✓</div>
+          <div>
+            <b>Private community access</b>
+            <span>Join to view ongoing content inside the group.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timerBox">
+        <div class="timerTop">
+          <span>Redirecting in</span>
+          <span>Secure</span>
+        </div>
+        <div class="time" id="time">--</div>
+        <div class="bar"><div class="fill" id="fill"></div></div>
+      </div>
+
+      <a class="cta" id="cta" href="#">Join Learning Community</a>
+      <div class="subnote">If redirect doesn’t happen, tap the button.</div>
+    </div>
+
+    <footer>
+      <b id="footName">Astra Ai Learning</b> • 18+ • Educational purpose only<br/>
+      Ads managed by <b id="agencyName">AdBlast Bengal</b>
+      <div class="disc">
+        Disclaimer: This community shares educational and informational content only.
+        Nothing here should be considered professional advice. Please use your own judgment and
+        do your own research before taking any action.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Fill dynamic values
+    const nameEl = document.getElementById('name');
+    const footEl = document.getElementById('footName');
+    const ctaEl  = document.getElementById('cta');
+    const logoEl = document.getElementById('logoTxt');
+    const agencyEl = document.getElementById('agencyName');
+
+    nameEl.textContent = CONFIG.channelName;
+    footEl.textContent = CONFIG.channelName;
+    ctaEl.href = CONFIG.tgLink;
+    agencyEl.textContent = CONFIG.agencyName || "AdBlast Bengal";
+
+    // initials (no image)
+    const words = (CONFIG.channelName || "").trim().split(/\s+/).filter(Boolean);
+    const initials = (words[0]?.[0] || "A") + (words[1]?.[0] || "A");
+    logoEl.textContent = initials.toUpperCase();
+
+    // Timer
+    let t = Number(CONFIG.timerSec || 60);
+    const total = t;
+    const timeEl = document.getElementById('time');
+    const fillEl = document.getElementById('fill');
+
+    function render(){
+      timeEl.textContent = t + "s";
+      fillEl.style.width = (t/total*100) + "%";
+      if (t <= 5){
+        timeEl.classList.add('urgent');
+        fillEl.classList.add('urgent');
+      }
+    }
+
+    function go(){
+      window.location.href = CONFIG.tgLink;
+      // if user returns/back, reset
+      setTimeout(() => {
+        t = Number(CONFIG.timerSec || 60);
+        timeEl.classList.remove('urgent');
+        fillEl.classList.remove('urgent');
+        render();
+        start();
+      }, 800);
+    }
+
+    function start(){
+      render();
+      const iv = setInterval(() => {
+        t--;
+        render();
+        if (t <= 0){
+          clearInterval(iv);
+          go();
+        }
+      }, 1000);
+
+      ctaEl.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (CONFIG.pixelId && typeof fbq !== "undefined") fbq('track', 'Subscribe');
+        clearInterval(iv);
+        go();
+      }, { once:true });
+    }
+
+    start();
+  </script>
+</body>
+</html>
